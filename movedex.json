@@ -1,0 +1,82 @@
+[{
+    "name": "Tackle",
+    "basePower": 50,
+    "priority": 0,
+    "type": "Normal",
+    "move": "Physical",
+    "pp": 35,
+    "accuracy": 1,
+    "levelLearned": 0
+}, {
+    "name": "Slash",
+    "basePower": 70,
+    "priority": 0,
+    "type": "Normal",
+    "move": "Physical",
+    "pp": 20,
+    "accuracy": 1,
+    "levelLearned": 1
+}, {
+    "name": "Fire Fang",
+    "basePower": 65,
+    "priority": 0,
+    "type": "Fire",
+    "move": "Physical",
+    "pp": 15,
+    "accuracy": 0.95,
+    "levelLearned": 0
+}, {
+    "name": "Ice Fang",
+    "basePower": 65,
+    "priority": 0,
+    "type": "Ice",
+    "move": "Physical",
+    "pp": 15,
+    "accuracy": 0.95,
+    "levelLearned": 0
+}, {
+    "name": "Poison Fang",
+    "basePower": 65,
+    "priority": 0,
+    "type": "Poison",
+    "move": "Physical",
+    "pp": 15,
+    "accuracy": 0.95,
+    "levelLearned": 0
+}, {
+    "name": "Thunder Fang",
+    "basePower": 65,
+    "priority": 0,
+    "type": "Fire",
+    "move": "Physical",
+    "pp": 15,
+    "accuracy": 0.95,
+    "levelLearned": 0
+}, {
+    "name": "Hyper Fang",
+    "basePower": 80,
+    "priority": 0,
+    "type": "Normal",
+    "move": "Physical",
+    "pp": 15,
+    "accuracy": 0.9,
+    "levelLearned": 2
+}, {
+    "name": "Scratch",
+    "basePower": 40,
+    "priority": 0,
+    "type": "Normal",
+    "move": "Physical",
+    "pp": 35,
+    "accuracy": 1,
+    "levelLearned": 0
+}, {
+    "name": "Super Fang",
+    "basePower": 0,
+    "priority": 0,
+    "type": "Normal",
+    "move": "Physical",
+    "pp": 10,
+    "accuracy": 0.9,
+    "levelLearned": 9
+}]
