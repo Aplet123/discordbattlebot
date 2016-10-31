@@ -1,0 +1,24 @@
+{
+  "name": "battlebot",
+  "version": "1.0.0",
+  "description": "Discord Battle Bot",
+  "author": "PgSuper and Aplet123",
+  "contributors": [],
+  "scripts": {
+    "start": "node main.js"
+  },
+  "main": "battlebot.js",
+  "repository": {
+  "type": "git",
+  "url": "https://github.com/Aplet123/discordbattlebot"
+},
+  "bugs": {
+  "url": "https://github.com/Aplet123/discordbattlebot/issues"
+},
+  "keywords": [
+  "battlebot"
+],
+  "dependencies": {
+    "discord.js": "^10.0.1"
+  }
+}
