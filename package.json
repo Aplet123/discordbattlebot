@@ -5,9 +5,9 @@
   "engines": {
     "node": "6.7.0"
   },
-  "main": "battlebot.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node battlebot.js"
+    "start": "node index.js"
   },
   "dependencies": {
     "discord.js":"^10.0.1"
