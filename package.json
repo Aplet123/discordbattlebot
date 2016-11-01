@@ -1,24 +1,22 @@
 {
   "name": "battlebot",
-  "version": "1.0.0",
-  "description": "Discord Battle Bot",
-  "author": "PgSuper and Aplet123",
-  "contributors": [],
-  "scripts": {
-    "start": "node battlebot.js"
+  "version": "0.0.1",
+  "description": "A Discord Battle Bot.",
+  "engines": {
+    "node": "6.7.0"
   },
   "main": "battlebot.js",
-  "repository": {
-  "type": "git",
-  "url": "https://github.com/Aplet123/discordbattlebot"
-},
-  "bugs": {
-  "url": "https://github.com/Aplet123/discordbattlebot/issues"
-},
-  "keywords": [
-  "battlebot"
-],
+  "scripts": {
+    "start": "node battle.js"
+  },
   "dependencies": {
-    "discord.js": "^10.0.1"
-  }
+    "discord.js":"^10.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Aplet123/discordbattlebot"
+  },
+  "keywords": [
+    "battlebot"
+  ]
 }
