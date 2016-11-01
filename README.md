@@ -6,3 +6,6 @@ BattleBot is a discord bot being produced by Aplet123 and PgSuper. It is about b
 
 ##How can I help?
 You can help by giving us... suggestions! Sure! We'll see suggestions!
+
+##Is there a discord?!?!?!
+YES! The invite link is https://discord.gg/hVF4Fs4.
