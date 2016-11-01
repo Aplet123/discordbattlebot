@@ -5,7 +5,7 @@
   "author": "PgSuper and Aplet123",
   "contributors": [],
   "scripts": {
-    "start": "node main.js"
+    "start": "node battlebot.js"
   },
   "main": "battlebot.js",
   "repository": {
