@@ -3,9 +3,6 @@
 var Discord = require("discord.js");
 var bot = new Discord.Client({ bot: true });
 var fs = require("fs");
-var http = require("http");
-var server = http.createServer((req, res) => { res.end("lol nothing here what are you looking at"); });
-server.listen(8080, function(){});
 //process.chdir("./Documents/Bot Stuff/BattleBot");
 var token = process.env.TOKEN;
 var movedex = JSON.parse(fs.readFileSync("./info/movedex.json", "utf8"));
@@ -378,33 +375,37 @@ bot.on("message", function(message) {
 				} else {
 					message.reply("Invalid number.");
 				}
-		} else if(/^settype1$/i.test(command)) {
-				if(param in typedex) {
-					if(id in playerdex) {
-						if(Player.import(playerdex[id]).typing[1] !== param) {
-							var p = Player.import(playerdex[id]);
-							p.typing[0] = param;
-							playerdex[id] = p.export;
-							fs.writeFileSync("./info/playerdex.json", JSON.stringify(playerdex));
-							message.reply("Primary type changed.");
-						} else {
-							message.reply("Secondary type is the same.");
-						}
+		} else if(/^settype$/i.test(command) && /^\w+\s\w+$/.test(param)) {
+			var type1 = param.split` `[0];
+			var type2 = param.split` `[1];
+			if(type1 in typedex && type2 in typedex) {
+				if(id in playerdex) {
+					if(type1 !== type2) {
+						var p = Player.import(playerdex[id]);
+						p.typing[0] = type1;
+						p.typing[1] = type2;
+						playerdex[id] = p.export;
+						fs.writeFileSync("./info/playerdex.json", JSON.stringify(playerdex));
+						message.reply("Type changed.");
 					} else {
-						message.reply("User ID not registered in playerdex.");
+						message.reply("Both types are the same.");
 					}
 				} else {
-					message.reply("Invalid type.");
+					message.reply("User ID not registered in playerdex.");
 				}
-			} else if(/^settype2$/i.test(command)) {
+			} else {
+				message.reply("Invalid type.");
+			}
+		} else if(/^settype$/i.test(command) && /^\w+$/.test(param)) {
 				if(param in typedex) {
 					if(id in playerdex) {
 						if(Player.import(playerdex[id]).typing[0] !== param) {
 							var p = Player.import(playerdex[id]);
-							p.typing[1] = param;
+							p.typing[0] = param;
+							p.splice(1, 1);
 							playerdex[id] = p.export;
 							fs.writeFileSync("./info/playerdex.json", JSON.stringify(playerdex));
-							message.reply("Secondary type changed.");
+							message.reply("Type changed.");
 						} else {
 							message.reply("Primary type is the same.");
 						}
