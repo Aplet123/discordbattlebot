@@ -7,7 +7,7 @@ var http = require("http");
 var server = http.createServer((req, res) => { res.end("lol nothing here what are you looking at"); });
 server.listen(8080, function(){});
 //process.chdir("./Documents/Bot Stuff/BattleBot");
-var token = JSON.parse(fs.readFileSync("./Token/token.json", "utf8")).token;
+var token = process.env.TOKEN;
 var movedex = JSON.parse(fs.readFileSync("./info/movedex.json", "utf8"));
 var playerdex = JSON.parse(fs.readFileSync("./info/playerdex.json", "utf8"));
 var typedex = JSON.parse(fs.readFileSync("./info/typedex.json", "utf8"));
